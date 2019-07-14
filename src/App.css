@@ -1,0 +1,89 @@
+/* 전체 설정*/
+.App{
+  margin:0;
+  padding:0;
+  font-family:Arial, Helvetica, sans-serif;
+  width:100%;
+  height:100%;
+}
+body, html, #root{
+  width:100%;
+  height:100%;
+}
+
+
+/* 전체 감싸는 Div */
+.container{
+  padding: 0 !important;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items:center;
+  width:100%;
+  height:100%;
+}
+
+
+
+/* 왼쪽 박스 설정 */
+.leftBox{
+  padding:20px;
+  flex: 1;
+  display:flex;
+  flex-direction:column;
+  align-items: flex-start;
+}
+
+/* 왼쪽 찾는 부분 css 적용 */
+.text{
+  margin: 0 0 20px 0;
+}
+.schForm{
+  display:flex;
+  flex-direction:row;
+}
+.schBtn{
+  margin: 0 10px;
+  border-radius: 0;
+}
+
+
+/* 결과값 출력 - 상태에 따라 글씨색 변경 */
+.resultBox{
+  margin:10px 0;
+}
+em{
+  font-weight:bold;
+}
+.Good em{
+  color:green;
+}
+.Moderate em{
+  color: rgba(233, 233, 10, 0.911);
+} 
+.Sensitive em{
+  color:orange;
+}
+.Unhealthy em{
+  color:red;
+}
+.Hazardous em{
+  color:purple;
+}
+
+
+/* 오른쪽 박스 설정*/
+.rightBox{
+  flex: 1;
+}
+/* 이미지 크기 */
+.airImg{
+  width:100%;
+}
+
+/*600px 이하는 그림 숨기기*/
+@media screen and (max-width: 500px) {
+  .rightBox {
+    display: none;
+  }
+}
