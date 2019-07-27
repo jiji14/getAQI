@@ -5,7 +5,7 @@ class AirImage extends Component{
 
     _airQualityImg = (quality) =>{
 
-        // switch 사용
+        // quality 파라미터로 받아서 switch문 사용
         switch(quality){
             case 'None':
                 return 'https://media.tenor.com/images/d1c81eafdc947e7ad1989da43bc65f32/tenor.png';
@@ -25,7 +25,7 @@ class AirImage extends Component{
     }
   
     render(){
-        const quality = this.props.quality;
+        const quality = this.props.airInfo.quality;
         const imgSrc = this._airQualityImg(quality);
         return (
             <Image className="airImg" src={imgSrc} rounded/>
