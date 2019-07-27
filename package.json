@@ -36,8 +36,8 @@
   },
   "homepage": "https://jiji14.github.io/getAQI",
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "ghpages": "0.0.10",
     "git-push": "^0.1.1"
   }
-  
 }
