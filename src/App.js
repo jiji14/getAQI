@@ -19,7 +19,7 @@ class App extends Component{
   }
 
   // Getting data from Api
-  _callApi = () => {
+  _callApi = (city) => {
     const city = this.state.city;
     return fetch('https://api.waqi.info/feed/'+city+'/?token=a52f054e9b618ef2f10a33155f2f3e4cd50ef1d7')
     .then(response => response.json())
@@ -32,6 +32,7 @@ class App extends Component{
           let _quality = '';
           
           // pm25 값에 따라 quality 값 설정
+          // function 따로 빼기 
           if(pm25 <= 50){
             _quality = 'Good';   
           }else if(50 < pm25 && pm25 <= 100){
@@ -54,7 +55,20 @@ class App extends Component{
             time: result.data.time.s,
             quality: _quality
           });
+
+          // return new AirQuality(...)
+
         }
+
+        // setstate을 handlesubmit 안에 
+        // _handleSubmit(){
+        //   const city=
+        //   const result = await this._callApi(city)
+        //   this.setState({
+
+        //   })
+        // }
+
         /*
         // else if 구문을 넣어서 city 오입력했을때 나누고 싶은데 이 구문을 넣게 되면 state가 초기화됨...
         else if(result.status === 'error'){
@@ -89,7 +103,7 @@ class App extends Component{
   }
 
   render(){
-    this._callApi();
+    this._callApi(); //submit 할때 한번만 불러오게 만들기
     const city = this.state.city;
     const time = this.state.time;
     const pm25 = this.state.pm25;
