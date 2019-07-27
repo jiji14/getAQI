@@ -32,5 +32,9 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://jiji14.github.io/getAQI/"
+  "homepage": "https://jiji14.github.io/getAQI/",
+  "devDependencies": {
+    "ghpages": "0.0.10"
+  },
+  "deploy": "npm run build &&gh-pages -d build"
 }
