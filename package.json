@@ -15,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "npm run build &&gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,9 +34,10 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://jiji14.github.io/getAQI/",
+  "homepage": "https://jiji14.github.io/getAQI",
   "devDependencies": {
-    "ghpages": "0.0.10"
-  },
-  "deploy": "npm run build &&gh-pages -d build"
+    "ghpages": "0.0.10",
+    "git-push": "^0.1.1"
+  }
+  
 }

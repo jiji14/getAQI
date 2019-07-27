@@ -18,8 +18,8 @@ class App extends Component{
     };
   }
 
-  // Getting data from Api
-  _callApi = (city) => {
+  // Getting data from Api // city 파라미터로 받기
+  _callApi = () => {
     const city = this.state.city;
     return fetch('https://api.waqi.info/feed/'+city+'/?token=a52f054e9b618ef2f10a33155f2f3e4cd50ef1d7')
     .then(response => response.json())
@@ -31,7 +31,7 @@ class App extends Component{
           const pm25 = result.data.iaqi.pm25.v;
           let _quality = '';
           
-          // pm25 값에 따라 quality 값 설정
+          // pm25 값에 따라 quality값 설정
           // function 따로 빼기 
           if(pm25 <= 50){
             _quality = 'Good';   
