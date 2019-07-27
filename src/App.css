@@ -81,6 +81,12 @@ em{
   width:100%;
 }
 
+/*에러메세지*/
+.errorMessage{
+  padding-top:20px;
+  font-size: 15px;
+}
+
 /*600px 이하는 그림 숨기기*/
 @media screen and (max-width: 500px) {
   .rightBox {

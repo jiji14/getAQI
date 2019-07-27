@@ -9,7 +9,7 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state={
-      isLoaded: false,
+      isLoaded: true,
       city:null,
       airIndex:null,
       time:null,
@@ -39,7 +39,7 @@ class App extends Component{
 
     this.setState(
       {
-        isLoaded: true,
+        isLoaded : true,
         airIndex: airIndex,
         time: time,
         quality: _quality     
@@ -92,16 +92,27 @@ class App extends Component{
     const time = this.state.time;
     const airIndex = this.state.airIndex;
     const quality = this.state.quality;
+    const isLoaded = this.state.isLoaded;
 
     return(
       <div className='container'>
+        
         <div className='leftBox'>
           <Findcity onCreate={this.handleCreate} />
-          <ShowResult city={city} time={time} airIndex={airIndex} quality={quality}/>
+          {isLoaded ? (
+            <ShowResult city={city} time={time} airIndex={airIndex} quality={quality}/>
+          ) : (
+            <div className='errorMessage'>
+              Failed to load Data. Please try again.
+            </div>
+          )}
         </div>
-        <div className='rightBox'>
-          <AirImage airIndex={airIndex} quality={quality}/>
-        </div>
+        {isLoaded ? (
+          <div className='rightBox'>
+            <AirImage airIndex={airIndex} quality={quality}/>
+          </div>
+          ) : (null)}
+        
       </div>
     )
   }
