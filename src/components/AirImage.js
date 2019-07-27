@@ -7,6 +7,8 @@ class AirImage extends Component{
 
         // switch 사용
         switch(quality){
+            case 'None':
+                return 'https://media.tenor.com/images/d1c81eafdc947e7ad1989da43bc65f32/tenor.png';
             case 'Good':
                 return 'http://vincenthills.info/wp-content/uploads/2009/08/iStock_000010003815Small.jpg';    
             case 'Moderate':

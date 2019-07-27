@@ -7,17 +7,17 @@ class ShowResult extends Component{
     render(){
         const city = this.props.city;
         const time = this.props.time;
-        const pm25 = this.props.pm25;
+        const airIndex = this.props.airIndex;
         const quality = this.props.quality;
 
-        if(city!= null && pm25 != null){
+        if(city!= null && airIndex != null){
             return(
                 <div>
                     <div className='resultBox'>
                         <ListGroup variant="flush">
                             <ListGroup.Item>Location  :  {city}</ListGroup.Item>
                             <ListGroup.Item>Time  :  {time}</ListGroup.Item>
-                            <ListGroup.Item>Air quality  :  {pm25}pm</ListGroup.Item>
+                            <ListGroup.Item>Air quality  :  {airIndex}pm</ListGroup.Item>
                         </ListGroup>
                     </div>
 
