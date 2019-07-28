@@ -11,12 +11,12 @@ class ShowResult extends Component{
 
         if(city!= null && airInfo.airIndex != null){
             return(
-                <div>
+                <div className="showResult">
                     <div className='resultBox'>
                         <ListGroup variant="flush">
                             <ListGroup.Item>Location  :  {city}</ListGroup.Item>
-                            <ListGroup.Item>Time  :  {airInfo.time}</ListGroup.Item>
-                            <ListGroup.Item>Air quality  :  {airInfo.airIndex}pm</ListGroup.Item>
+                            <ListGroup.Item>Time of Measurement :  {airInfo.time}</ListGroup.Item>
+                            <ListGroup.Item>Air Quality  :  {airInfo.airIndex}pm</ListGroup.Item>
                         </ListGroup>
                     </div>
 
