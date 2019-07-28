@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import './css/App.css';
 import Findcity from './components/Findcity';
 import ShowResult from './components/ShowResult';
 import AirImage from './components/AirImage';
@@ -82,6 +82,7 @@ class App extends Component{
         city:_city
       }
     )
+
     // city 값에 따른 미세먼지값 받아오는 API 함수
     this._callApi(_city);
   }

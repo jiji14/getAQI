@@ -1,0 +1,12 @@
+/* 왼쪽 찾는 부분 css 적용 */
+.text{
+    margin: 0 0 20px 0;
+  }
+  .schForm{
+    display:flex;
+    flex-direction:row;
+  }
+  .schBtn{
+    margin: 0 10px;
+    border-radius: 0;
+  }

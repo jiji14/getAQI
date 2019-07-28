@@ -1,0 +1,23 @@
+/* 결과값 출력 - 상태에 따라 글씨색 변경 */
+.resultBox{
+    margin:10px 0;
+  }
+  em{
+    font-weight:bold;
+  }
+  .Good em{
+    color:green;
+  }
+  .Moderate em{
+    color: rgba(233, 233, 10, 0.911);
+  } 
+  .Sensitive em{
+    color:orange;
+  }
+  .Unhealthy em{
+    color:red;
+  }
+  .Hazardous em{
+    color:purple;
+  }
+  

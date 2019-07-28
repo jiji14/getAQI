@@ -33,58 +33,19 @@ body, html, #root{
   align-items: flex-start;
 }
 
-/* 왼쪽 찾는 부분 css 적용 */
-.text{
-  margin: 0 0 20px 0;
-}
-.schForm{
-  display:flex;
-  flex-direction:row;
-}
-.schBtn{
-  margin: 0 10px;
-  border-radius: 0;
-}
-
-
-/* 결과값 출력 - 상태에 따라 글씨색 변경 */
-.resultBox{
-  margin:10px 0;
-}
-em{
-  font-weight:bold;
-}
-.Good em{
-  color:green;
-}
-.Moderate em{
-  color: rgba(233, 233, 10, 0.911);
-} 
-.Sensitive em{
-  color:orange;
-}
-.Unhealthy em{
-  color:red;
-}
-.Hazardous em{
-  color:purple;
-}
-
 
 /* 오른쪽 박스 설정*/
 .rightBox{
   flex: 1;
 }
-/* 이미지 크기 */
-.airImg{
-  width:100%;
-}
+
 
 /*에러메세지*/
 .errorMessage{
   padding-top:20px;
   font-size: 15px;
 }
+
 
 /*600px 이하는 그림 숨기기*/
 @media screen and (max-width: 500px) {

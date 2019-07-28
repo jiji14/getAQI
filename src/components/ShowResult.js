@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import ListGroup from 'react-bootstrap/ListGroup'
+import ListGroup from 'react-bootstrap/ListGroup';
+import '../css/ShowResult.css';
 
 
 class ShowResult extends Component{

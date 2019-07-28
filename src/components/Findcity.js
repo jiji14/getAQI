@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form';
+import '../css/Findcity.css';
 
 class Findcity extends Component{
     constructor(props){
@@ -17,7 +18,6 @@ class Findcity extends Component{
     }
 
     handleSubmit = (event) => {
-        //alert(this.state.value);
         event.preventDefault();
         this.props.onCreate(this.state);
         this.setState({

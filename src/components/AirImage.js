@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Image from 'react-bootstrap/Image';
+import '../css/AirImage.css';
 
 class AirImage extends Component{
 
