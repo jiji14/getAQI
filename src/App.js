@@ -76,10 +76,10 @@ class App extends Component{
   handleCreate = (data) => {
 
     // 자식 컴포넌트에서 city 값 받아서 setState
-    const _city = data.city;
+    const _city = data;
     this.setState(
       {
-        city:_city
+        city:data
       }
     )
 

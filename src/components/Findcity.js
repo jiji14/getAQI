@@ -13,17 +13,24 @@ class Findcity extends Component{
 
     handleChange = (event) => {
         this.setState(
-            {city: event.target.value}
-        );
+             {city: event.target.value}
+        );   
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.onCreate(this.state);
+
+        // 앞 뒤 공백 없애주기
+        const city = this.state.city.trim();
+        this._sendDate(city);
+    }
+
+    _sendDate = (city) => {
+        this.props.onCreate(city);
         this.setState({
             // 상태초기화
             city: ''
-        });
+        });   
     }
 
     render(){
