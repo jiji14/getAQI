@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../css/Findcity.css';
 
-class Findcity extends Component{
+class Findcity extends PureComponent{
     constructor(props){
         super(props);
         this.state={
@@ -11,15 +11,16 @@ class Findcity extends Component{
         };
     }
 
+    // input 입력할때마다 state 변경 
     handleChange = (event) => {
         this.setState(
              {city: event.target.value}
         );   
     }
 
+    // sumit 할때 입력한 city data 전송 
     handleSubmit = (event) => {
         event.preventDefault();
-
         // 앞 뒤 공백 없애주기
         const city = this.state.city.trim();
         this._sendDate(city);
@@ -28,9 +29,11 @@ class Findcity extends Component{
     _sendDate = (city) => {
         this.props.onCreate(city);
         this.setState({
-            // 상태초기화
+            // 전송 후 상태초기화
             city: ''
         });   
+        // 전송 후 inputBox에서 커서 위치 
+        this.inputRef.focus();
     }
 
     render(){
@@ -43,6 +46,7 @@ class Findcity extends Component{
                         onChange={this.handleChange}
                         name="city"
                         placeholder="city" 
+                        ref={(input) => {this.inputRef = input; }}
                     />
                     <Button type="submit" variant="info" className="schBtn">Search</Button>
                 </form>
