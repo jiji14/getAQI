@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7d0cdcf727b0658bf9c87ce2eab17fc5",
+    "revision": "fb4c181056b700b1c3ec1b3957da7930",
     "url": "/getAQI/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/getAQI/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "d2f4b8cd860a3fe276ef",
+    "revision": "cc7377a23d9d11cb79cd",
     "url": "/getAQI/static/css/main.a4b669b7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/getAQI/static/js/2.106262be.chunk.js"
   },
   {
-    "revision": "d2f4b8cd860a3fe276ef",
-    "url": "/getAQI/static/js/main.14b1a43b.chunk.js"
+    "revision": "cc7377a23d9d11cb79cd",
+    "url": "/getAQI/static/js/main.4965eeb9.chunk.js"
   },
   {
     "revision": "31c20a605c26985e7e50",
